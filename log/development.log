@@ -589,3 +589,329 @@ Started GET "/dashboards" for 127.0.0.1 at 2012-07-20 15:59:34 +0200
   [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Rendered dashboards/index.html within layouts/application (16.3ms)
 Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-23 11:47:08 +0200
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (44.4ms)
+Completed 200 OK in 57ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2012-07-23 11:47:11 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-07-23 11:47:16 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFyh/AEnOzOf9IpX3wM8ER9dV+prvUBXBuskTaIy5bE=", "email"=>"nicolas@wearecloud.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'nicolas@wearecloud.com') LIMIT 1
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 152ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 11:47:16 +0200
+  Processing by DashboardsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered dashboards/index.html within layouts/application (16.0ms)
+Completed 200 OK in 20ms (Views: 19.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/log_out" for 127.0.0.1 at 2012-07-23 11:47:19 +0200
+  Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-23 11:47:19 +0200
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 17ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-23 11:58:48 +0200
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 16ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2012-07-23 12:01:41 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 5ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-07-23 12:18:19 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tFyh/AEnOzOf9IpX3wM8ER9dV+prvUBXBuskTaIy5bE=", "email"=>"nicolas@wearecloud.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'nicolas@wearecloud.com') LIMIT 1
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 89ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 12:18:19 +0200
+  Processing by DashboardsController#index as HTML
+Completed   in 1434ms
+
+OAuth2::Error ( ):
+  app/controllers/dashboards_controller.rb:9:in `index'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 12:19:07 +0200
+  Processing by DashboardsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered dashboards/index.html within layouts/application (31.5ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 12:19:57 +0200
+  Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/index.html within layouts/application (16.5ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-23 12:20:32 +0200
+  Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 19ms (Views: 11.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 12:20:39 +0200
+  Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/index.html within layouts/application (33.1ms)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 12:20:45 +0200
+  Processing by DashboardsController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered dashboards/index.html within layouts/application (15.9ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 12:20:54 +0200
+  Processing by DashboardsController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/index.html within layouts/application (33.4ms)
+Completed 200 OK in 37ms (Views: 35.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 12:21:13 +0200
+  Processing by DashboardsController#index as HTML
+Completed   in 1170ms
+
+OAuth2::Error ( ):
+  app/controllers/dashboards_controller.rb:9:in `index'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.9ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 12:21:22 +0200
+  Processing by DashboardsController#index as HTML
+Completed   in 1018ms
+
+OAuth2::Error ( ):
+  app/controllers/dashboards_controller.rb:9:in `index'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-23 15:48:12 +0200
+  Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 36ms (Views: 24.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboard" for 127.0.0.1 at 2012-07-23 15:48:19 +0200
+
+ActionController::RoutingError (No route matches "/dashboard"):
+  
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 15:48:23 +0200
+  Processing by DashboardsController#index as HTML
+Completed   in 6ms
+
+NoMethodError (undefined method `web_server' for #<OAuth2::Client:0x00000100b8f078>):
+  app/controllers/dashboards_controller.rb:6:in `index'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.7ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (7.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-23 15:49:00 +0200
+  Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered users/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 24ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 15:49:02 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://bigquery.paperboyapp.com/oauth/authorize
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-23 15:49:39 +0200
+  Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 46ms (Views: 33.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 15:49:40 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://bigquery.paperboyapp.com/oauth/authorize
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-23 15:59:22 +0200
+  Processing by UsersController#new as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered users/new.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 28ms (Views: 16.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 15:59:23 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://bigquery.paperboyapp.com/oauth/authorize
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 16:04:04 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://api.paperboyapp.com/oauth/authorize
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 16:04:22 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://api.paperboyapp.com/oauth/authorize
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 16:16:39 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://bigquery.paperboyapp.com/oauth/authorize
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-23 16:18:38 +0200
+  Processing by UsersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered users/new.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 50ms (Views: 13.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 16:18:39 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://bigquery.paperboyapp.com/oauth/authorize
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-23 16:19:13 +0200
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 18ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2012-07-23 16:19:15 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 6ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-07-23 16:19:24 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4oLSlp+giIDiSq+09jMJsHE51OpNbHuQ/42hWDE9uiU=", "email"=>"nicolas@wearecloud.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'nicolas@wearecloud.com') LIMIT 1
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 109ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 16:19:24 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://bigquery.paperboyapp.com/oauth/authorize
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 16:20:51 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://bigquery.paperboyapp.com/oauth/authorize
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 16:23:55 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://bigquery.paperboyapp.com/oauth/authorize?response_type=code&client_id=lhiA3Fc2MNIK0mLXmorm&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 16:25:07 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://bigquery.paperboyapp.com/oauth/authorize?response_type=code&client_id=lhiA3Fc2MNIK0mLXmorm&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 16:26:03 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://bigquery.paperboyapp.com/oauth/authorize?response_type=code&client_id=lhiA3Fc2MNIK0mLXmorm&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback" for 127.0.0.1 at 2012-07-23 16:26:27 +0200
+
+ActionController::RoutingError (No route matches "/dashboards/callback"):
+  
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (19.4ms)
+
+
+Started GET "/dashboards/callback" for 127.0.0.1 at 2012-07-23 16:26:35 +0200
+
+ActionController::RoutingError (No route matches "/dashboards/callback"):
+  
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/dashboards/callback" for 127.0.0.1 at 2012-07-23 16:28:26 +0200
+  Processing by DashboardsController#callback as HTML
+Completed   in 12ms
+
+ActionView::MissingTemplate (Missing template dashboards/callback with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/nicolasraspal/Documents/dev/demo-bime-api/app/views"):
+  
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 16:28:32 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://bigquery.paperboyapp.com/oauth/authorize?response_type=code&client_id=lhiA3Fc2MNIK0mLXmorm&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 33ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 16:39:51 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://bigquery.paperboyapp.com/oauth/authorize?response_type=code&client_id=lhiA3Fc2MNIK0mLXmorm&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
