@@ -1,0 +1,5 @@
+A sample application that shows integration with the Bime API. 
+
+It is not by any mean a best practice guide or production code quality. It's intend is purely to demo how the API can be used to integrate and drive Bime's dashboards from a third party application.
+
+It contains basic user management (create and login). The dashboard controller contains most of the logic related to the Bime's API.

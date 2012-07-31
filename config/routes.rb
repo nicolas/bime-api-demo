@@ -4,7 +4,7 @@ Auth::Application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
   get "dashboards" => "dashboards#index", :as => "dashboards"
 
-  match "dashboards/callback" => "dashboards#callback"
+  match "dashboards/list" => "dashboards#list"
   root :to => "users#new"
   resources :users
   resources :sessions

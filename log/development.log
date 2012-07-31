@@ -915,3 +915,1232 @@ Started GET "/dashboards" for 127.0.0.1 at 2012-07-23 16:39:51 +0200
   Processing by DashboardsController#index as HTML
 Redirected to https://bigquery.paperboyapp.com/oauth/authorize?response_type=code&client_id=lhiA3Fc2MNIK0mLXmorm&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
 Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-30 14:54:19 +0200
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 62ms (Views: 51.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/log_in" for 127.0.0.1 at 2012-07-30 14:54:22 +0200
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 6ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sessions" for 127.0.0.1 at 2012-07-30 14:54:31 +0200
+  Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HpPP/TcqnUnGgldLYOPITmrjtjCbY346y0a8GjgPjzE=", "email"=>"nicolas@wearecloud.com", "password"=>"[FILTERED]", "commit"=>"Log in"}
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."email" = 'nicolas@wearecloud.com') LIMIT 1
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 154ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 14:54:31 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 36ms
+
+
+Started GET "/dashboards/callback?code=sZts6nD9dcKMDtldDuXi&state=" for 127.0.0.1 at 2012-07-30 14:55:02 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"sZts6nD9dcKMDtldDuXi", "state"=>""}
+Completed   in 3079ms
+
+ActionView::MissingTemplate (Missing template dashboards/callback with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/nicolasraspal/Documents/dev/demo-bime-api/app/views"):
+  
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/dashboards/callback?code=sZts6nD9dcKMDtldDuXi&state=" for 127.0.0.1 at 2012-07-30 14:57:27 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"sZts6nD9dcKMDtldDuXi", "state"=>""}
+Completed   in 2108ms
+
+NameError (uninitialized constant OAuth2::HTTPError):
+  app/controllers/dashboards_controller.rb:17:in `rescue in callback'
+  app/controllers/dashboards_controller.rb:11:in `callback'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (21.1ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (25.9ms)
+
+
+Started GET "/dashboards/" for 127.0.0.1 at 2012-07-30 14:57:34 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=ZGRVKMk4jWz21s5DZJQh&state=" for 127.0.0.1 at 2012-07-30 14:57:44 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"ZGRVKMk4jWz21s5DZJQh", "state"=>""}
+Completed   in 1829ms
+
+NameError (uninitialized constant OAuth2::HTTPError):
+  app/controllers/dashboards_controller.rb:17:in `rescue in callback'
+  app/controllers/dashboards_controller.rb:11:in `callback'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 14:58:24 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?error=access_denied&state=" for 127.0.0.1 at 2012-07-30 14:58:26 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"error"=>"access_denied", "state"=>""}
+Completed   in 2ms
+
+ActionView::MissingTemplate (Missing template dashboards/callback with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/nicolasraspal/Documents/dev/demo-bime-api/app/views"):
+  
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 14:58:52 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=IF7jfVFzNPus4pwrVdZj&state=" for 127.0.0.1 at 2012-07-30 14:58:56 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"IF7jfVFzNPus4pwrVdZj", "state"=>""}
+Completed   in 1970ms
+
+NameError (uninitialized constant OAuth2::HTTPError):
+  app/controllers/dashboards_controller.rb:17:in `rescue in callback'
+  app/controllers/dashboards_controller.rb:11:in `callback'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.6ms)
+
+
+Started GET "/dashboards/callback?code=IF7jfVFzNPus4pwrVdZj&state=" for 127.0.0.1 at 2012-07-30 15:00:09 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"IF7jfVFzNPus4pwrVdZj", "state"=>""}
+Rendered text template (0.0ms)
+Completed 200 OK in 1857ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dashboards/callback?code=IF7jfVFzNPus4pwrVdZj&state=" for 127.0.0.1 at 2012-07-30 15:00:32 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"IF7jfVFzNPus4pwrVdZj", "state"=>""}
+Completed   in 1785ms
+
+NameError (uninitialized constant OAuth2::HTTPError):
+  app/controllers/dashboards_controller.rb:17:in `rescue in callback'
+  app/controllers/dashboards_controller.rb:11:in `callback'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (17.0ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (21.5ms)
+
+
+Started GET "/dashboards/callback?code=IF7jfVFzNPus4pwrVdZj&state=" for 127.0.0.1 at 2012-07-30 15:00:47 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"IF7jfVFzNPus4pwrVdZj", "state"=>""}
+Completed   in 2212ms
+
+NameError (uninitialized constant OAuth2::HTTPError):
+  app/controllers/dashboards_controller.rb:17:in `rescue in callback'
+  app/controllers/dashboards_controller.rb:11:in `callback'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/dashboards/callback?code=IF7jfVFzNPus4pwrVdZj&state=" for 127.0.0.1 at 2012-07-30 15:00:56 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"IF7jfVFzNPus4pwrVdZj", "state"=>""}
+Rendered text template (0.0ms)
+Completed 200 OK in 1794ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dashboards/callback?code=IF7jfVFzNPus4pwrVdZj&state=" for 127.0.0.1 at 2012-07-30 15:01:42 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"IF7jfVFzNPus4pwrVdZj", "state"=>""}
+Rendered text template (0.0ms)
+Completed 200 OK in 2266ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:36:14 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Flist
+Completed 302 Found in 7ms
+
+
+Started GET "/dashboards/list?code=i7lj49EJU708DYhD09sh&state=" for 127.0.0.1 at 2012-07-30 17:36:24 +0200
+
+ActionController::RoutingError (No route matches "/dashboards/list"):
+  
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (6.3ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:39:43 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Flist
+Completed 302 Found in 50ms
+
+
+Started GET "/dashboards/list?code=mNMgEGg2aLD7ca1WDPAF&state=" for 127.0.0.1 at 2012-07-30 17:39:49 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"mNMgEGg2aLD7ca1WDPAF", "state"=>""}
+Rendered dashboards/list.html.erb within layouts/application (18.8ms)
+Completed   in 2718ms
+
+ActionView::Template::Error (undefined local variable or method `name' for #<#<Class:0x000001015101b0>:0x00000101509ce8>):
+    1: <% @dashboards.each do | dashboard | %>
+    2: <ul>
+    3: 	<li><%= dashboard[name] %></li>
+    4: </ul>
+    5: <% end %>
+  app/views/dashboards/list.html.erb:3:in `block in _app_views_dashboards_list_html_erb__4496533481778771161_2158508600_1448606625601722177'
+  app/views/dashboards/list.html.erb:1:in `each'
+  app/views/dashboards/list.html.erb:1:in `_app_views_dashboards_list_html_erb__4496533481778771161_2158508600_1448606625601722177'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (20.6ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (25.7ms)
+
+
+Started GET "/dashboards/list?code=mNMgEGg2aLD7ca1WDPAF&state=" for 127.0.0.1 at 2012-07-30 17:40:36 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"mNMgEGg2aLD7ca1WDPAF", "state"=>""}
+Rendered dashboards/list.html.erb within layouts/application (7.1ms)
+Completed   in 1865ms
+
+ActionView::Template::Error (undefined local variable or method `name' for #<#<Class:0x0000010157fd58>:0x0000010157bbe0>):
+    1: <% @dashboards.each do | dashboard | %>
+    2: <ul>
+    3: 	<li><%= dashboard[name] %></li>
+    4: </ul>
+    5: <% end %>
+  app/views/dashboards/list.html.erb:3:in `block in _app_views_dashboards_list_html_erb__4496533481778771161_2158741820_1448606625601722177'
+  app/views/dashboards/list.html.erb:1:in `each'
+  app/views/dashboards/list.html.erb:1:in `_app_views_dashboards_list_html_erb__4496533481778771161_2158741820_1448606625601722177'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.3ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.7ms)
+
+
+Started GET "/dashboards/list?code=mNMgEGg2aLD7ca1WDPAF&state=" for 127.0.0.1 at 2012-07-30 17:41:26 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"mNMgEGg2aLD7ca1WDPAF", "state"=>""}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (51.7ms)
+Completed 200 OK in 1930ms (Views: 53.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/dashboards/list?code=mNMgEGg2aLD7ca1WDPAF&state=" for 127.0.0.1 at 2012-07-30 17:48:03 +0200
+
+ActionController::RoutingError (No route matches "/dashboards/list"):
+  
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/dashboards/list?code=mNMgEGg2aLD7ca1WDPAF&state=" for 127.0.0.1 at 2012-07-30 17:48:10 +0200
+
+ActionController::RoutingError (No route matches "/dashboards/list"):
+  
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.7ms)
+
+
+Started GET "/dashboards/" for 127.0.0.1 at 2012-07-30 17:48:35 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 43ms
+
+
+Started GET "/dashboards/callback?code=NepeX8u8XtTCc1MUShoJ&state=" for 127.0.0.1 at 2012-07-30 17:48:39 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"NepeX8u8XtTCc1MUShoJ", "state"=>""}
+Completed   in 1342ms
+
+NameError (uninitialized constant OAuth2::HTTPError):
+  app/controllers/dashboards_controller.rb:20:in `rescue in callback'
+  app/controllers/dashboards_controller.rb:16:in `callback'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.5ms)
+
+
+Started GET "/dashboards/callback?code=NepeX8u8XtTCc1MUShoJ&state=" for 127.0.0.1 at 2012-07-30 17:49:40 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"NepeX8u8XtTCc1MUShoJ", "state"=>""}
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 1004ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:49:41 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=RMsR2pyrWJsZNWlrFUGO&state=" for 127.0.0.1 at 2012-07-30 17:49:46 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"RMsR2pyrWJsZNWlrFUGO", "state"=>""}
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 938ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:49:47 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=GBhEStTkElKtmI5vImhP&state=" for 127.0.0.1 at 2012-07-30 17:49:51 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"GBhEStTkElKtmI5vImhP", "state"=>""}
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 1728ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:49:53 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=NepeX8u8XtTCc1MUShoJ&state=" for 127.0.0.1 at 2012-07-30 17:50:42 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"NepeX8u8XtTCc1MUShoJ", "state"=>""}
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 1309ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:50:44 +0200
+  Processing by DashboardsController#index as HTML
+
+***** Debugger requested, but was not available (ensure ruby-debug is listed in Gemfile/installed as gem): Start server with --debugger to enable *****
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:50:53 +0200
+  Processing by DashboardsController#index as HTML
+
+***** Debugger requested, but was not available (ensure ruby-debug is listed in Gemfile/installed as gem): Start server with --debugger to enable *****
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=KOCraFpEsMI4agdNGWlp&state=" for 127.0.0.1 at 2012-07-30 17:50:56 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"KOCraFpEsMI4agdNGWlp", "state"=>""}
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 2573ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:50:59 +0200
+  Processing by DashboardsController#index as HTML
+
+***** Debugger requested, but was not available (ensure ruby-debug is listed in Gemfile/installed as gem): Start server with --debugger to enable *****
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:55:25 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 44ms
+
+
+Started GET "/dashboards/callback?code=updlzVAOgSiiQryHVaCG&state=" for 127.0.0.1 at 2012-07-30 17:55:30 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"updlzVAOgSiiQryHVaCG", "state"=>""}
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 1335ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:55:32 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=5xVJtZOdnNxIPjrrfaBq&state=" for 127.0.0.1 at 2012-07-30 17:56:08 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"5xVJtZOdnNxIPjrrfaBq", "state"=>""}
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 927ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:56:09 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=92OzuikM7RGFwIVd7bWD&state=" for 127.0.0.1 at 2012-07-30 17:56:37 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"92OzuikM7RGFwIVd7bWD", "state"=>""}
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 964ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:56:38 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=m9NDVkfzpc2eK2ZozXxL&state=" for 127.0.0.1 at 2012-07-30 17:56:47 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"m9NDVkfzpc2eK2ZozXxL", "state"=>""}
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 1414ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:56:49 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=Teo0ITHlY7SEy6eHXKvl&state=" for 127.0.0.1 at 2012-07-30 17:58:09 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"Teo0ITHlY7SEy6eHXKvl", "state"=>""}
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 1556ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:58:11 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=vPGzB0D6cMuBuBv8LyaZ&state=" for 127.0.0.1 at 2012-07-30 17:58:14 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"vPGzB0D6cMuBuBv8LyaZ", "state"=>""}
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 909ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:58:15 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=54rI7sTwTd5UBwTxx4mf&state=" for 127.0.0.1 at 2012-07-30 17:58:33 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"54rI7sTwTd5UBwTxx4mf", "state"=>""}
+Redirected to http://localhost:3000/dashboards
+Completed 302 Found in 891ms
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 17:58:35 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at 2012-07-30 18:33:39 +0200
+  Processing by UsersController#new as HTML
+  [1m[36mSQL (0.2ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered users/new.html.erb within layouts/application (108.5ms)
+Completed 200 OK in 230ms (Views: 112.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 18:33:48 +0200
+  Processing by DashboardsController#index as HTML
+Completed   in 1ms
+
+NameError (undefined local variable or method `access_token' for #<DashboardsController:0x00000103b0ac58>):
+  app/controllers/dashboards_controller.rb:11:in `index'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.1ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 18:34:08 +0200
+  Processing by DashboardsController#index as HTML
+Completed   in 0ms
+
+NoMethodError (undefined method `get' for nil:NilClass):
+  app/controllers/dashboards_controller.rb:11:in `index'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.8ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 18:34:33 +0200
+  Processing by DashboardsController#index as HTML
+Completed   in 0ms
+
+NoMethodError (undefined method `get' for nil:NilClass):
+  app/controllers/dashboards_controller.rb:12:in `index'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.9ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 18:36:59 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=sCJeKYxWckTwF10KQ3X6&state=" for 127.0.0.1 at 2012-07-30 18:37:03 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"sCJeKYxWckTwF10KQ3X6", "state"=>""}
+Redirected to http://localhost:3000/dashboards?authenticated=true
+Completed 302 Found in 1342ms
+
+
+Started GET "/dashboards?authenticated=true" for 127.0.0.1 at 2012-07-30 18:37:05 +0200
+  Processing by DashboardsController#index as HTML
+  Parameters: {"authenticated"=>"true"}
+Completed   in 0ms
+
+NoMethodError (undefined method `get' for nil:NilClass):
+  app/controllers/dashboards_controller.rb:7:in `index'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.7ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-30 18:38:35 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/callback?code=shWPabrpetQQTl9Pe4GP&state=" for 127.0.0.1 at 2012-07-30 18:38:39 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"shWPabrpetQQTl9Pe4GP", "state"=>""}
+Redirected to http://localhost:3000/dashboards?authenticated=true
+Completed 302 Found in 979ms
+
+
+Started GET "/dashboards?authenticated=true" for 127.0.0.1 at 2012-07-30 18:38:40 +0200
+  Processing by DashboardsController#index as HTML
+  Parameters: {"authenticated"=>"true"}
+Completed   in 0ms
+
+NoMethodError (undefined method `get' for nil:NilClass):
+  app/controllers/dashboards_controller.rb:7:in `index'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.0ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.8ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-31 12:18:52 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Fcallback
+Completed 302 Found in 50ms
+
+
+Started GET "/dashboards/callback?code=Mk8FfSzL0xiHBVcK9Uph&state=" for 127.0.0.1 at 2012-07-31 12:18:59 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"Mk8FfSzL0xiHBVcK9Uph", "state"=>""}
+Completed   in 2516ms
+
+NameError (uninitialized constant OAuth2::HTTPError):
+  app/controllers/dashboards_controller.rb:16:in `rescue in callback'
+  app/controllers/dashboards_controller.rb:11:in `callback'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.4ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+
+
+Started GET "/dashboards/callback?code=Mk8FfSzL0xiHBVcK9Uph&state=" for 127.0.0.1 at 2012-07-31 12:20:27 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"Mk8FfSzL0xiHBVcK9Uph", "state"=>""}
+Completed   in 1133ms
+
+NameError (undefined local variable or method `access_token' for #<DashboardsController:0x00000102bdb278>):
+  app/controllers/dashboards_controller.rb:13:in `callback'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.2ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+
+
+Started GET "/dashboards/callback?code=Mk8FfSzL0xiHBVcK9Uph&state=" for 127.0.0.1 at 2012-07-31 12:20:42 +0200
+  Processing by DashboardsController#callback as HTML
+  Parameters: {"code"=>"Mk8FfSzL0xiHBVcK9Uph", "state"=>""}
+Completed   in 2050ms
+
+ActionView::MissingTemplate (Missing template dashboards/callback with {:handlers=>[:erb, :rjs, :builder, :rhtml, :rxml], :formats=>[:html], :locale=>[:en, :en]} in view paths "/Users/nicolasraspal/Documents/dev/demo-bime-api/app/views"):
+  
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/missing_template.erb within rescues/layout (0.6ms)
+
+
+Started GET "/dashboards/callback?code=Mk8FfSzL0xiHBVcK9Uph&state=" for 127.0.0.1 at 2012-07-31 12:21:12 +0200
+
+ActionController::RoutingError (No route matches "/dashboards/callback"):
+  
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/dashboards/list?code=Mk8FfSzL0xiHBVcK9Uph&state=" for 127.0.0.1 at 2012-07-31 12:21:18 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"Mk8FfSzL0xiHBVcK9Uph", "state"=>""}
+Completed   in 976ms
+
+OAuth2::Error (invalid_grant: 
+{"error":"invalid_grant"}):
+  app/controllers/dashboards_controller.rb:11:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.3ms)
+
+
+Started GET "/dashboards/" for 127.0.0.1 at 2012-07-31 12:21:24 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Flist
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/list?code=qRgXER79quNLjvJLHNz1&state=" for 127.0.0.1 at 2012-07-31 12:21:28 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"qRgXER79quNLjvJLHNz1", "state"=>""}
+  [1m[36mSQL (1.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 1827ms (Views: 55.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/dashboards/list?code=qRgXER79quNLjvJLHNz1&state=" for 127.0.0.1 at 2012-07-31 12:22:10 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"qRgXER79quNLjvJLHNz1", "state"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered dashboards/list.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 2010ms (Views: 23.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboards/list?code=qRgXER79quNLjvJLHNz1&state=" for 127.0.0.1 at 2012-07-31 12:22:39 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"qRgXER79quNLjvJLHNz1", "state"=>""}
+  [1m[35mUser Load (0.7ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (18.6ms)
+Completed 200 OK in 2017ms (Views: 21.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/dashboards/list?code=qRgXER79quNLjvJLHNz1&state=" for 127.0.0.1 at 2012-07-31 12:24:25 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"qRgXER79quNLjvJLHNz1", "state"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered dashboards/list.html.erb within layouts/application (35.6ms)
+Completed 200 OK in 2229ms (Views: 39.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/dashboards" for 127.0.0.1 at 2012-07-31 15:29:50 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Flist
+Completed 302 Found in 51ms
+
+
+Started GET "/dashboards/list?code=Kb226q3tpw6Vh87DRD5h&state=" for 127.0.0.1 at 2012-07-31 15:30:09 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"Kb226q3tpw6Vh87DRD5h", "state"=>""}
+  [1m[36mSQL (0.9ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (67.3ms)
+Completed 200 OK in 3161ms (Views: 71.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/dashboards/" for 127.0.0.1 at 2012-07-31 15:55:37 +0200
+  Processing by DashboardsController#index as HTML
+Redirected to https://yannick.paperboyapp.com/oauth/authorize?response_type=code&client_id=vVzhk5FyzizLLe051J5HjUHpKVBrgAou0KvRsx4z&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fdashboards%2Flist
+Completed 302 Found in 1ms
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 15:55:49 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 3288ms
+
+OAuth2::Error (<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>We're sorry, but something went wrong (500)</title>
+	<style type="text/css">
+		body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
+		div.dialog {
+			width: 600px;
+			padding: 0 0;
+			margin: 0 auto 0 auto;
+			border: 1px solid #ccc;
+			border-right-color: #999;
+			border-bottom-color: #999;
+		}
+		h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+	</style>
+</head>
+
+<body>
+  <!-- This file lives in public/500.html -->
+  <div class="dialog">
+    <h1>We're sorry, but something went wrong.</h1>
+    <p>We've been notified about this issue and we'll take a look at it shortly.</p>
+    <p><img src="/images/404.png" /></p>
+  </div>
+</body>
+</html>):
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.7ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 15:56:51 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 2365ms
+
+OAuth2::Error (<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>We're sorry, but something went wrong (500)</title>
+	<style type="text/css">
+		body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
+		div.dialog {
+			width: 600px;
+			padding: 0 0;
+			margin: 0 auto 0 auto;
+			border: 1px solid #ccc;
+			border-right-color: #999;
+			border-bottom-color: #999;
+		}
+		h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+	</style>
+</head>
+
+<body>
+  <!-- This file lives in public/500.html -->
+  <div class="dialog">
+    <h1>We're sorry, but something went wrong.</h1>
+    <p>We've been notified about this issue and we'll take a look at it shortly.</p>
+    <p><img src="/images/404.png" /></p>
+  </div>
+</body>
+</html>):
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:16:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.8ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 15:58:23 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 5767ms
+
+OAuth2::Error (<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <title>We're sorry, but something went wrong (500)</title>
+	<style type="text/css">
+		body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
+		div.dialog {
+			width: 600px;
+			padding: 0 0;
+			margin: 0 auto 0 auto;
+			border: 1px solid #ccc;
+			border-right-color: #999;
+			border-bottom-color: #999;
+		}
+		h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+	</style>
+</head>
+
+<body>
+  <!-- This file lives in public/500.html -->
+  <div class="dialog">
+    <h1>We're sorry, but something went wrong.</h1>
+    <p>We've been notified about this issue and we'll take a look at it shortly.</p>
+    <p><img src="/images/404.png" /></p>
+  </div>
+</body>
+</html>):
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.4ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.8ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:00:42 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (1.8ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 2428ms
+
+OAuth2::Error (Couldn't find NamedUser with ID=1 AND (`named_users`.account_id = 1): 
+{
+    "metadata": null,
+    "error": "Couldn't find NamedUser with ID=1 AND (`named_users`.account_id = 1)",
+    "result": {}
+}):
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.4ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:06:07 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (2.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered dashboards/list.html.erb within layouts/application (21.2ms)
+Completed   in 10104ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    1: <ul>
+    2: <% @dashboards.each do | dashboard | %>
+    3: 	<% if dashboard["is_published"] %>
+    4: 		<li><a href=<%= "/dashboard/show?id=#{dashboard["publication_guid"]}" %>><%= dashboard["name"] %></li>
+    5: 	<% end %>
+  app/views/dashboards/list.html.erb:2:in `_app_views_dashboards_list_html_erb__3404099790192187292_2170969300_3201208764991769696'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (10.5ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:07:03 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (0.6ms)
+Completed   in 2495ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    1: <ul>
+    2: <% @dashboards.each do | dashboard | %>
+    3: 	<% if dashboard["is_published"] %>
+    4: 		<li><a href=<%= "/dashboard/show?id=#{dashboard["publication_guid"]}" %>><%= dashboard["name"] %></li>
+    5: 	<% end %>
+  app/views/dashboards/list.html.erb:2:in `_app_views_dashboards_list_html_erb__3404099790192187292_2160771480_3201208764991769696'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.2ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.7ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:09:31 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (1.7ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered dashboards/list.html.erb within layouts/application (0.6ms)
+Completed   in 2498ms
+
+ActionView::Template::Error (You have a nil object when you didn't expect it!
+You might have expected an instance of Array.
+The error occurred while evaluating nil.each):
+    1: <ul>
+    2: <% @dashboards.each do | dashboard | %>
+    3: 	<% if dashboard["is_published"] %>
+    4: 		<li><a href=<%= "/dashboard/show?id=#{dashboard["publication_guid"]}" %>><%= dashboard["name"] %></li>
+    5: 	<% end %>
+  app/views/dashboards/list.html.erb:2:in `_app_views_dashboards_list_html_erb__3404099790192187292_2161249800_3201208764991769696'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.3ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.5ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (24.5ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:09:59 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (9.0ms)
+Completed 200 OK in 2374ms (Views: 13.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:14:35 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered dashboards/list.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 2662ms (Views: 7.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:14:50 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 2354ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:18:16 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 9496ms
+
+OAuth2::Error (ActiveRecord::RecordNotFound: 
+{
+    "metadata": null,
+    "error": "ActiveRecord::RecordNotFound",
+    "result": {}
+}):
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:22:14 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 2621ms
+
+OAuth2::Error (ActiveRecord::RecordNotFound: 
+{
+    "metadata": null,
+    "error": "ActiveRecord::RecordNotFound",
+    "result": {}
+}):
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.5ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (10.8ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:22:21 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 2376ms
+
+OAuth2::Error (ActiveRecord::RecordNotFound: 
+{
+    "metadata": null,
+    "error": "ActiveRecord::RecordNotFound",
+    "result": {}
+}):
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.4ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:22:51 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 2493ms
+
+OAuth2::Error (ActiveRecord::RecordNotFound: 
+{
+    "metadata": null,
+    "error": "ActiveRecord::RecordNotFound",
+    "result": {}
+}):
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:23:33 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 2484ms
+
+OAuth2::Error (ActiveRecord::RecordNotFound: 
+{
+    "metadata": null,
+    "error": "ActiveRecord::RecordNotFound",
+    "result": {}
+}):
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (5.0ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.2ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:23:38 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 3121ms
+
+OAuth2::Error (ActiveRecord::RecordNotFound: 
+{
+    "metadata": null,
+    "error": "ActiveRecord::RecordNotFound",
+    "result": {}
+}):
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.6ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:23:53 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 3138ms
+
+OAuth2::Error (ActiveRecord::RecordNotFound: 
+{
+    "metadata": null,
+    "error": "ActiveRecord::RecordNotFound",
+    "result": {}
+}):
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.6ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.3ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:24:54 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered dashboards/list.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 2490ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:25:52 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed   in 2375ms
+
+NoMethodError (undefined method `[]' for #<OAuth2::Error:0x00000102937850>):
+  app/models/user.rb:16:in `rescue in get_or_create_named_user'
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:26:10 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 3151ms
+
+NoMethodError (undefined method `error' for #<OAuth2::Error:0x000001031ab180>):
+  app/models/user.rb:16:in `rescue in get_or_create_named_user'
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.5ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:26:22 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 2333ms (Views: 23.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:26:55 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 2381ms
+
+TypeError (can't convert OAuth2::Error into String):
+  app/models/user.rb:16:in `rescue in get_or_create_named_user'
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (20.9ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.3ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:27:22 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 2348ms (Views: 5.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:27:42 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered dashboards/list.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 2358ms (Views: 6.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:28:24 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 2316ms (Views: 7.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:28:45 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 3102ms (Views: 6.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:28:53 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered dashboards/list.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 2365ms (Views: 6.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:29:22 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 2681ms (Views: 6.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:30:12 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed   in 2889ms
+
+TypeError (can't convert OAuth2::Response into String):
+  app/models/user.rb:16:in `rescue in get_or_create_named_user'
+  app/models/user.rb:13:in `get_or_create_named_user'
+  app/controllers/dashboards_controller.rb:15:in `list'
+
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.7ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (3.4ms)
+Rendered /Users/nicolasraspal/.rvm/gems/ruby-1.9.2-p180/gems/actionpack-3.0.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (6.4ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:31:18 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 2794ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:31:51 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered dashboards/list.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 2348ms (Views: 6.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:37:27 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered dashboards/list.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 10332ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/dashboards/list?code=KIbGacNecw9oSI1cG3O2&state=" for 127.0.0.1 at 2012-07-31 16:39:02 +0200
+  Processing by DashboardsController#list as HTML
+  Parameters: {"code"=>"KIbGacNecw9oSI1cG3O2", "state"=>""}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered dashboards/list.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 9650ms (Views: 6.7ms | ActiveRecord: 0.1ms)
