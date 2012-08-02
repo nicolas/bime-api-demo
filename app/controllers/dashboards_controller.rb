@@ -19,12 +19,18 @@ class DashboardsController < ApplicationController
       @bime_user = current_user.create_named_user(access_token,@group) if @bime_user.nil?
       resp = access_token.get('/v2/named_user_groups/' + @bime_user["named_user_group_id"].to_s)
       @group = JSON.parse(resp.body)["result"]
-      p @group
+      @dashboards = @group["dashboards"]
     end
   end
 
   def show
-
+    dahsboard_id = params[:id]
+    access_token = OAuth2::AccessToken.new(bime_client,"VeJOmS8JjmjcIqRXHlXrrtGsIhmPK6gV46HMMx43")
+    @client.site = "http://api.example.com:3000"
+    resp = access_token.get "v2/dashboards/" + dahsboard_id
+    @dashboard = JSON.parse(resp.body)["result"]
+    @bime_user = current_user.get_named_user(access_token)
+    @access_token = @bime_user["access_token"]
   end
 
   private

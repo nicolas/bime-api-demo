@@ -25,10 +25,10 @@ end
   def get_named_user(access_token)
     begin
       user_response = access_token.get("/v2/named_users/#{self.id}?external=true") #we want to see if the user id of the curent user exist in Bime
-      user = JSON.parse(user_response)["result"]
+      user = JSON.parse(user_response.body)["result"]
       user
     rescue Exception => e
-
+      p e.message
     end
   end
 
