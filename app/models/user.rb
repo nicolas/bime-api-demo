@@ -9,6 +9,30 @@ class User < ActiveRecord::Base
   validates_presence_of :email
   validates_uniqueness_of :email
   
+def create_named_user(access_token,group)
+  begin
+    user_response = access_token.post("/v2/named_users") do |r|
+      r.params[:full_name] = self.email
+      r.params[:external_id] = self.id
+      r.params[:named_user_group_id] = group["id"]
+    end
+    user = JSON.parse(user_response.body)["result"]
+  rescue Exception => e
+    p e.message
+  end
+end
+
+  def get_named_user(access_token)
+    begin
+      user_response = access_token.get("/v2/named_users/#{self.id}?external=true") #we want to see if the user id of the curent user exist in Bime
+      user = JSON.parse(user_response)["result"]
+      user
+    rescue Exception => e
+
+    end
+  end
+
+
   def self.authenticate(email, password)
     user = find_by_email(email)
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)

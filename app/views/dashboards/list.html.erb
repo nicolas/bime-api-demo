@@ -1,0 +1,7 @@
+<ul>
+<% @dashboards.each do | dashboard | %>
+	<% if dashboard["is_published"] %>
+		<li><a href=<%= "/dashboard/show?id=#{dashboard["publication_guid"]}" %>><%= dashboard["name"] %></li>
+	<% end %>
+<% end %>
+</ul>
