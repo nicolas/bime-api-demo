@@ -18,7 +18,6 @@ def create_named_user(access_token,group)
     end
     user = JSON.parse(user_response.body)["result"]
   rescue Exception => e
-    p e.message
   end
 end
 
@@ -28,7 +27,6 @@ end
       user = JSON.parse(user_response.body)["result"]
       user
     rescue Exception => e
-      p e.message
     end
   end
 

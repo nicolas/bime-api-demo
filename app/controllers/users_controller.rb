@@ -6,7 +6,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to dashboard, :notice => "Signed up!"
+      redirect_to "/setup", :notice => "Signed up!"
     else
       render "new"
     end
