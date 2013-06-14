@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     # site : https://<your_bimeapp_account>.bimeapp.com
 
     @client ||= OAuth2::Client.new('gaClfxkgyRzfsdykDWONpyVFOE73JxzijZbYJHn9', 'rRf0ktbFFSoYizdH8fMNgfpwKAZFrI2gQTOgi5Ed',
-                                   :site => 'http://toto3.example.com:3000/',
+                                   :site => 'https://yannick.bimeapp.com', #Replace yannick by your account name
                                    :request_token_path => "/oauth/request_token",
                                    :access_token_path  => "/oauth/access_token",
                                    :authorize_path     => "/oauth/authorize",
