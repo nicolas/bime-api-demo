@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
   
 def create_named_user(access_token,group)
   begin
-    user_response = access_token.post("/v2/named_users") do |r|
-      r.params[:full_name] = self.email
+    user_response = access_token.post("/v3/named_users") do |r|
+      r.params[:login] = self.email
       r.params[:external_id] = self.id
       r.params[:named_user_group_id] = group["id"]
     end
@@ -23,7 +23,7 @@ end
 
   def get_named_user(access_token)
     begin
-      user_response = access_token.get("/v2/named_users/#{self.id}?external=true") #we want to see if the user id of the curent user exist in Bime
+      user_response = access_token.get("/v3/named_users/#{self.id}?external=true") #we want to see if the user id of the curent user exist in Bime
       user = JSON.parse(user_response.body)["result"]
       user
     rescue Exception => e

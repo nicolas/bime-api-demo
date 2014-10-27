@@ -10,6 +10,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "bcrypt-ruby", :require => "bcrypt"
 
 gem "oauth2"
+
+gem 'json'
 # Use unicorn as the web server
 # gem 'unicorn'
 
